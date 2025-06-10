@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-screen" id="loginScreen">
+    <h2>Welcome to Chatify</h2>
+    <input type="text" id="usernameInput" placeholder="Enter your username" />
+    <button onclick="enterChat()">Join Chat</button>
+    <div id="error" class="error"></div>
+  </div>
+
+  <div class="chat-screen hidden" id="chatScreen">
+    <div class="sidebar">
+      <h3>Chat Rooms</h3>
+      <ul id="roomList"></ul>
+      <input type="text" id="newRoomInput" placeholder="New room name" />
+      <button onclick="createRoom()">Create Room</button>
+    </div>
+
+    <div class="chat-area">
+      <div class="chat-header">
+        <span id="currentRoom">General</span>
+        <span id="currentUser"></span>
+      </div>
+      <div class="chat-box" id="chatBox"></div>
+      <form id="messageForm">
+        <div class="input-wrapper">
+          <span class="emoji-icon">Emoji</span>
+          <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" />
+          <span class="mic-icon">Mic</span>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.js"></script>
+</body>
+</html>
